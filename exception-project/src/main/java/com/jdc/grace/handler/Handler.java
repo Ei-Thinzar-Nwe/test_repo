@@ -3,7 +3,7 @@ package com.jdc.grace.handler;
 public class Handler {
 
 	private Person person;
-	
+	private int count = 1 ;
 	public Handler() {
 		super();
 		person = new Person();
@@ -20,18 +20,33 @@ public class Handler {
 		}
 		
 	}
-	
+	// null pointer exception when person object is not create yet
 	public void useAge() {
-		person.setAge(20);
-		int age = dividedByZero(person.getAge());
-		System.out.println(age);
+		try {
+			person.setAge(20);
+			int age = dividedByZero(person.getAge());
+			System.out.println(age);
+				} catch (ArithmeticException e) {
+					System.out.println("This is ArithmeticException because any number ");
+				}
+		
 	}
 	
-	public void recursive() {		
-		if(person.getAge() > 0) {
-			recursive();
+	//stack over flow error
+	public void recursive() {
+		try {
+			if (count > 0) {
+				System.out.println("recursive :" + count);
+				count ++;
+				recursive();
+			} 
+		} catch (StackOverflowError e) {
+			System.out.println("this is StackOverFlowError cause of recursive");
 		}
+		
 	}
+	
+	//arthimetic expection
 	private int dividedByZero(int age) {
 		return age/0 ;
 	}
