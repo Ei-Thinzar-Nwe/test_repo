@@ -6,7 +6,7 @@ import com.jdc.grace.trycatch.TryCatchData;
 
 import org.junit.jupiter.api.Test;
 
-public class TryCatchTest {
+public class CTryCatchTest {
 	
 	
 	TryCatchData data = new TryCatchData();

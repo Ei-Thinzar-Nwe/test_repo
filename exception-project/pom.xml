@@ -19,7 +19,12 @@
       <version>5.12.0</version>
       <scope>test</scope>
   </dependency>
-  </dependencies>
+  <dependency>
+  	<groupId>com.jdc.grace</groupId>
+  	<artifactId>01-java5-leatures</artifactId>
+  	<version>1.0</version>
+  </dependency>
+  	</dependencies>
   <build>
     <plugins>
       <plugin>

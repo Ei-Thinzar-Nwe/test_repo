@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 
 public class TryCatchData {
 	
+	@SuppressWarnings("unused")
 	public String useCheckedWithTryFinally() {
 		String str = null;
 		int res= 0;

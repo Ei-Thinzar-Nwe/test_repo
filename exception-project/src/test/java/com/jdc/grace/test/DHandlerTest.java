@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import com.jdc.grace.handler.Handler;
 
-public class HandlerTest {
+public class DHandlerTest {
 	
 	Handler handler = new Handler();
 
