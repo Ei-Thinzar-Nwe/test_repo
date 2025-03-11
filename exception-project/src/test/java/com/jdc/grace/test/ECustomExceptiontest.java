@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import com.jdc.grace.custom.CustomExceptionData;
+import com.jdc.grace.custom.MyCheckException;
 import com.jdc.grace.custom.MyUnCheckException;
 
 public class ECustomExceptiontest {
@@ -17,10 +18,18 @@ public class ECustomExceptiontest {
 		data = new CustomExceptionData();
 	}
 	
-	//@Test
-	/*void test() {
-		assertThrows(MyUnCheckException.class,() -> data.useException(" "));
-		assertThrows(MyUnCheckException.class,() -> data.useException(" "));
-		assertThrows(MyUnCheckException.class,() -> data.useException(null));
-	} */
+	@Test
+	void testExcetpion() {		
+		assertThrows(MyUnCheckException.class,() -> data.getMyUnCheckException(""));
+		assertThrows(MyUnCheckException.class,() -> data.changeCheckToUncheck(null));
+		assertThrows(MyCheckException.class,() -> data.getMyCheckException(" "));
+	
+	}
+	
+	
+	
+	
+	
+	
+	
 }

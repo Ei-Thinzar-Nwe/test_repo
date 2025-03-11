@@ -1,0 +1,18 @@
+package com.jdc.grace.collection;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.ClassOrderer.OrderAnnotation;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.TestMethodOrder;
+
+@TestMethodOrder( OrderAnnotation.class)
+public class JunitConfig {
+
+static CollectionData data;
+	
+	@BeforeAll
+	static void init() {
+		data = new CollectionData();
+	}
+	
+}
